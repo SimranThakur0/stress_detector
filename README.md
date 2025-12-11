@@ -76,7 +76,7 @@ A rolling window (5 samples) averages stress scores to reduce noise and provide 
 
 **Alternative Considered:**
 - Dlib: Slower inference time, requires more computational resources
-- Custom CNNs: Would require extensive training data and GPU inference
+
 
 ### rPPG Method (Green Channel + Bandpass Filtering)
 
