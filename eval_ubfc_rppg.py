@@ -10,20 +10,11 @@ from src.rppg.rppg_extractor import RPPGExtractor
 from src.fusion.stress_index import StressIndex
 
 
-# ============================================================
-# CONFIG
-# ============================================================
-
-# TODO: change this to your actual UBFC-rPPG video path
 VIDEO_PATH = "D:\\stress_detector\\eval_data\\subject1\\vid.avi"
 
 FPS = 30
-WINDOW_SECONDS = 10    # rPPG buffer length
+WINDOW_SECONDS = 10   
 
-
-# ============================================================
-# METRICS
-# ============================================================
 
 def compute_snr(signal, fs):
     sig = detrend(signal)
@@ -52,10 +43,6 @@ def estimate_bpm(signal, fs):
     peak_freq = freqs[band][np.argmax(spectrum[band])]
     return peak_freq * 60.0
 
-
-# ============================================================
-# RUN PIPELINE ON UBFC VIDEO
-# ============================================================
 
 detector = FaceMeshDetector()
 rppg = RPPGExtractor(fs=FPS, window_size_seconds=WINDOW_SECONDS, region="forehead")

@@ -33,3 +33,9 @@ def run_on_ubfc(video_path):
 
     cap.release()
     return np.array(bpm_values)
+
+
+if __name__ == "__main__":
+    video_file = "D:\\stress_detector\\eval_data\\subject1\\vid.avi"
+    bpm_results = run_on_ubfc(video_file)
+    print("Estimated BPM values:", bpm_results)

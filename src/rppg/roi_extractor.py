@@ -55,4 +55,3 @@ def draw_roi(frame, bbox, color=(0,255,0), thickness=2):
     cv2.rectangle(frame, (x, y), (x+w, y+h), color, thickness)
     return frame
 
-

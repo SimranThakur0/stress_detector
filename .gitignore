@@ -165,3 +165,12 @@ cython_debug/
 /.DS_Store
 /venv
 venv/
+eval_data/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+*.log
+logs/
